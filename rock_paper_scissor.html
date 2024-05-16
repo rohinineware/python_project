@@ -1,0 +1,58 @@
+
+
+scissor='''
+---,_______
+    _______)
+    _______)
+    (__)
+    (_)
+--,(__)
+
+'''
+
+rock='''
+---,__
+    (___)
+    (___)
+    (___)
+    (__)
+--,(__)
+'''
+
+paper='''
+---,_______
+    _______)
+    ____)
+    ___)
+    ___)
+--,__)
+'''
+game_image=[rock,paper,scissor]
+
+import random
+
+user_input=int(input("Enter input here: 0 for rock,1 for paper,2 for scissor,"))
+
+computer_input=random.randint(0,2)
+
+print("computer_choose")
+
+print(game_image[computer_input])
+
+if computer_input >2 or user_input < 0:
+    print("Not valid try again")
+    
+else:
+    if computer_input==user_input:
+        print("It's a tie")
+        
+    elif user_input==0 or computer_input==2:
+        print("you win")
+        
+    elif user_input==2 or computer_input==0:
+        print("you lose")
+        
+    elif computer_input > user_input:
+        print("you lose")
+    elif user_input > computer_input:
+        print("you win")
